@@ -90,7 +90,10 @@ router.delete('/:id', (req, res) => {
     },
   })
   .then((dbCategoryData) => {
-    if
+    if (!dbCategoryData) {
+      res.status(404).json({ message: "Id not found"});
+      return;
+    }
   })
 });
 
