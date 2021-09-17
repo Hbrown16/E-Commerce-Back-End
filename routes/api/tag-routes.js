@@ -74,7 +74,9 @@ router.put('/:id', (req, res) => {
        res.status(404).json({ message: "Id not found"});
        return;
      }
+     res.json(dbTagData);
    })
+   
 });
 
 router.delete('/:id', (req, res) => {
