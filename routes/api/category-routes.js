@@ -69,7 +69,11 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-  
+  .then((dbCategoryData) => {
+    if (!dbCategoryData) {
+      
+    }
+  })
 });
 
 router.delete('/:id', (req, res) => {
