@@ -20,6 +20,7 @@ router.get('/', (req, res) => {
       },
     ],
   })
+  .then((dbProductData) => res.json(dbProductData))
 });
 
 // get one product
