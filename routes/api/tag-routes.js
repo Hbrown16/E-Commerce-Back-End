@@ -89,6 +89,11 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
   })
+  .then((dbTagData) => {
+    if (!dbTagData) {
+      
+    }
+  })
 });
 
 module.exports = router;
