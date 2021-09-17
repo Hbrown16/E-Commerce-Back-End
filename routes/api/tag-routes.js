@@ -15,6 +15,8 @@ router.get('/', (req, res) => {
       },
     ],
   })
+  .then((dbTagData) => res.json(dbTagData))
+  
 });
 
 router.get('/:id', (req, res) => {
