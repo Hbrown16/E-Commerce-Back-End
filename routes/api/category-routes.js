@@ -37,7 +37,13 @@ router.get('/:id', (req, res) => {
       },
     ],
   })
-  
+  .then((dbCategoryData) => {
+    if (!dbCategoryData) {
+      res.status(404).json({ message: "id not found"});
+      return;
+    }
+    
+  })
 });
 
 router.post('/', (req, res) => {
