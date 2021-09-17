@@ -22,6 +22,7 @@ router.get('/', (req, res) => {
   })
   .then((dbProductData) => res.json(dbProductData))
   .catch((err) => {
+    console.log(err);
     
   })
 });
