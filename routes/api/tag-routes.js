@@ -42,6 +42,7 @@ router.get('/:id', (req, res) => {
        res.status(404).json({ message: "Id not found"});
        return;
      } 
+      res.json(dbTagData);
     })
 });
 
