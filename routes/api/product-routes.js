@@ -142,7 +142,9 @@ router.delete('/:id', (req, res) => {
     },
   })
   .then((dbProductData) => {
-    
+    if (!dbProductData) {
+      
+    }
   })
 
 });
