@@ -56,7 +56,9 @@ router.post('/', (req, res) => {
     tag_name: req.body.tag_name,
   })
    .then((dbTagData) => res.json(dbTagData))
-   
+   .catch((err) => {
+     
+   })
 });
 
 router.put('/:id', (req, res) => {
