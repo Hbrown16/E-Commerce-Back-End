@@ -44,6 +44,9 @@ router.get('/:id', (req, res) => {
     }
     res.json(dbCategoryData);
   })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 
 router.post('/', (req, res) => {
