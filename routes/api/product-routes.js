@@ -47,6 +47,9 @@ router.get('/:id', (req, res) => {
       },
     ],
   })
+  .then((dbProductData) => {
+    
+  })
 });
 
 // create new product
