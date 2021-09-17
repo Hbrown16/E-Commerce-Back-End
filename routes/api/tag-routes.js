@@ -70,7 +70,10 @@ router.put('/:id', (req, res) => {
     },
   })
    .then((dbTagData) => {
-     
+     if (!dbTagData[0]) {
+       res.status(404).json({ message: "Id not found"});
+       return;
+     }
    })
 });
 
