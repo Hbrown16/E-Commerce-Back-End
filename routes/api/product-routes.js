@@ -33,8 +33,9 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Category and Tag data
   Product.findone({
     where: {
-      
-    }
+      id: req.params.id,
+    },
+    
   })
 });
 
