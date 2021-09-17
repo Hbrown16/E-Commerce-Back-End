@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
   })
   .then((dbCategoryData) => {
     if (!dbCategoryData) {
-      res.status(404).json({ message: "id not found"});
+      res.status(404).json({ message: "Id not found"});
       return;
     }
     res.json(dbCategoryData);
@@ -71,8 +71,10 @@ router.put('/:id', (req, res) => {
   })
   .then((dbCategoryData) => {
     if (!dbCategoryData) {
-      
+      res.status(404).json({ message: "Id not found"});
+      return;
     }
+    res.json(500).json(err);
   })
 });
 
