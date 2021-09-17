@@ -97,8 +97,9 @@ router.delete('/:id', (req, res) => {
     res.json(dbTagData);
   })
   .catch((err) => {
-    
-  })
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
