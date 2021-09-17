@@ -76,7 +76,9 @@ router.put('/:id', (req, res) => {
      }
      res.json(dbTagData);
    })
-   
+   .catch((err) => {
+     
+   })
 });
 
 router.delete('/:id', (req, res) => {
