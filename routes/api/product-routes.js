@@ -32,7 +32,9 @@ router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
   Product.findone({
-    
+    where: {
+      
+    }
   })
 });
 
