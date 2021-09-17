@@ -141,6 +141,10 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
   })
+  .then((dbProductData) => {
+    
+  })
+
 });
 
 module.exports = router;
