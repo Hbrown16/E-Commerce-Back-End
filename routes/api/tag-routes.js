@@ -44,6 +44,10 @@ router.get('/:id', (req, res) => {
      } 
       res.json(dbTagData);
     })
+    .catch((err) => {
+      console.log(err);
+      
+    })
 });
 
 router.post('/', (req, res) => {
