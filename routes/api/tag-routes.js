@@ -43,11 +43,11 @@ router.get('/:id', (req, res) => {
        return;
      } 
       res.json(dbTagData);
-    })
-    .catch((err) => {
+  })
+  .catch((err) => {
       console.log(err);
-      
-    })
+      res.status(500).json(err);
+  });
 });
 
 router.post('/', (req, res) => {
