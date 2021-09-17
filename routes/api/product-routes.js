@@ -49,7 +49,7 @@ router.get('/:id', (req, res) => {
   })
   .then((dbProductData) => {
     if (!dbProductData) {
-      res.status(404).json({ "ID not found in products"});
+      res.status(404).json({ message: "ID not found in products" });
       return;
     }
     res.json(dbProductData);
