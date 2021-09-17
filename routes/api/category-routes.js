@@ -15,6 +15,10 @@ router.get('/', (req, res) => {
       },
     ],
   })
+  .then((dbCategoryData) => res.json(dbCategoryData))
+  .catch((err) => {
+    
+  })
 });
 
 router.get('/:id', (req, res) => {
