@@ -9,8 +9,11 @@ router.get('/', (req, res) => {
   Tag.findAll({
     attributes: ["id","tag_name"],
     include: [
-      
-    ]
+      {
+        model: Product,
+        attributes: ["id","product_name","price","stock","category_id"],
+      },
+    ],
   })
 });
 
