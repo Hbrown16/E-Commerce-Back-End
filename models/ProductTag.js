@@ -13,6 +13,9 @@ ProductTag.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    product_id: {
+      type
+    }
   },
   {
     sequelize,
