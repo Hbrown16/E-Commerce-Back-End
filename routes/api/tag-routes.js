@@ -31,9 +31,18 @@ router.get('/:id', (req, res) => {
     },
     attributes: ["id","tag_name"],
     include: [
-      
-    ]
+      {
+        model: Product,
+        attributes: ["id","product_name","price","stock","category_id"],
+      },
+    ],
   })
+    .then((dbTagData) => {
+     if (!dbTagData) {
+       res.status(404).json({ message: "Id not found"});
+       return;
+     } 
+    })
 });
 
 router.post('/', (req, res) => {
