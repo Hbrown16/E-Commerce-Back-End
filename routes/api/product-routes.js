@@ -36,6 +36,11 @@ router.get('/:id', (req, res) => {
       id: req.params.id,
     },
     attributes:["id","product_name","price","stock","category_id"],
+    includes: [
+      {
+        
+      }
+    ]
   })
 });
 
