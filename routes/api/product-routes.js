@@ -52,8 +52,9 @@ router.get('/:id', (req, res) => {
       res.status(404).json({ "ID not found in products"});
       return;
     }
-    
+    res.json(dbProductData);
   })
+  
 });
 
 // create new product
