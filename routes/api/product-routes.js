@@ -54,7 +54,10 @@ router.get('/:id', (req, res) => {
     }
     res.json(dbProductData);
   })
-  
+  .catch((err) => {
+    console.log(err);
+    
+  })
 });
 
 // create new product
