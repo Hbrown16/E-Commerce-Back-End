@@ -26,7 +26,7 @@ THEN I am able to successfully create, update, and delete data in my database
 ```
 
 ## Demo
-[Video Link]()
+[Video Link](https://watch.screencastify.com/v/ESousofZ6nEuxwDA8iEP)
 
 
 ## Links:
