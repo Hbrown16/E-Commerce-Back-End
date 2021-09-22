@@ -27,7 +27,7 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Demo
 [Video Link]()
-![Demo ecom]()
+
 
 ## Links:
 [Github Link](https://github.com/Hbrown16/E-Commerce-Back-End)
