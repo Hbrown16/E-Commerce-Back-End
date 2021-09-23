@@ -18,7 +18,7 @@ router.get("/", ( req, res) => {
         model: Tag,
         attributes:["tag_name"],
       },
-    ],
+    ]
   })
   .then((dbProductData) => res.json(dbProductData))
   .catch((err) => {
