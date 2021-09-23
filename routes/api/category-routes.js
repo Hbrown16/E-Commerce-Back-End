@@ -1,13 +1,13 @@
-const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const router = require("express").Router();
+const { Category, Product, ProductTag } = require('../../models');
 
 // The `/api/categories` endpoint
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   // find all categories
   // be sure to include its associated Products
   Category.findAll({
-    attributes: ["id","category_name"],
+    attributes: ["id", "category_name"],
     include: [
       {
         model: Product,
@@ -15,14 +15,14 @@ router.get('/', (req, res) => {
       },
     ],
   })
-  .then((dbCategoryData) => res.json(dbCategoryData))
-  .catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
+    .then((dbCategoryData) => res.json(dbCategoryData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
   });
 });
 
-router.get('/:id', (req, res) => {
+router.get("/:id", (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   Category.findOne({
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
   })
   .then((dbCategoryData) => {
     if (!dbCategoryData) {
-      res.status(404).json({ message: "Id not found"});
+      res.status(404).json({ message: "id not found"});
       return;
     }
     res.json(dbCategoryData);
@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
   });
 });
 
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
   // create a new category
   Category.create({
     category_name: req.body.category_name,
@@ -62,7 +62,7 @@ router.post('/', (req, res) => {
   });
 });
 
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   // update a category by its `id` value
   Category.update(req.body, {
     where: {
@@ -82,7 +82,7 @@ router.put('/:id', (req, res) => {
   });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
     where: {
@@ -91,7 +91,7 @@ router.delete('/:id', (req, res) => {
   })
   .then((dbCategoryData) => {
     if (!dbCategoryData) {
-      res.status(404).json({ message: "Id not found"});
+      res.status(404).json({ message: "id not found"});
       return;
     }
     res.json(dbCategoryData);
