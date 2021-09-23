@@ -35,17 +35,17 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes:["id","product_name","price","stock","category_id"],
+    attributes:["id","product_name","price","stock"],
     includes: [
       {
         model: Category,
-        attributes:["id", "category_name"],
+        attributes:["category_name"],
       },
       {
         model: Tag,
-        attributes:["id", "tag_name"],
+        attributes:["tag_name"],
       },
-    ],
+    ]
   })
   .then((dbProductData) => {
     if (!dbProductData) {
